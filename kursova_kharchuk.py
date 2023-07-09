@@ -48,7 +48,6 @@ def norma(mas):
         result += i ** 2
     return math.sqrt(result)
 
-# print(f'\nnorma(grad) = {norma(gradient(x0))}')
 
 # критерій закінчення 1
 def kriteriy_1(x0, x1, f0, f1):
@@ -105,7 +104,6 @@ def svenn(x0, alpha, lmb, s, f0):
         else:
             return [b, lmb]
 
-
 # метод золотого перерізу
 def gold_section(a, b, eps, x0, s):
     l = b - a
@@ -150,10 +148,6 @@ def dscPowell(x0, a, b, s, eps):
         xApprox = (a + xmin) / 2 - a1 / (2 * a2)
     return xmin
 
-# lam=dscPowell(x0, 0.1, 0, s, 0.00001)
-# print(f'lambda={lam}')
-# print(f'calculate_x = {calculate_x(x0, lam, A)}')
-
 def calculate_A(A, x0, x1, grad0, grad1):
     I=np.eye(len(x0))
 
@@ -189,7 +183,6 @@ def calculate_A(A, x0, x1, grad0, grad1):
     resTwo = first / second
     return resOne + resTwo # Вертаємо кортеж з результатами
 
-# print(f'calculate_A={calculate_A(A, x0, x1)}')
 
 def summary(calls_of_func, iteration, restart, xmin, fmin):
     print('Кінець програми')
